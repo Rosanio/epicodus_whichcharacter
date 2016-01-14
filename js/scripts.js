@@ -1,7 +1,7 @@
 var college = "Are you in college?";
 var inShape = "Are you in shape?";
 var dumpster = "Would you eat from the dumpster?"
-var narcissistic = "Are you all you can think of?"
+var narcissistic = "Are you all you can think about?"
 var currentQuestion = college;
 
 
@@ -15,6 +15,11 @@ $(function() {
     checkState("no");
     $('#questionArea').text(currentQuestion);
   });
+  $('#resetButton').on('click', function() {
+    currentQuestion = college;
+    $('#questionArea').text(currentQuestion);
+    $('#character').empty();
+  })
 });
 
 
